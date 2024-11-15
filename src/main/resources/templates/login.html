@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<style>
+    body {
+        font-family: Aptos, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    form {
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        width: 300px;
+        border-radius: 8px;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+<body>
+<form onsubmit="return validateInput()" action="/login" method="post">
+    <h2>Login</h2>
+    <input type="text" id="emailOrMobile" name="emailOrMobile" placeholder="Enter your email or phone">
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+    <button type="submit">Login</button>
+    <a href="/index">Home</a>
+    <span th:text="${error}"></span>
+</form>
+<script>
+    function validateInput() {
+        const input = document.getElementById('emailOrMobile').value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phonePattern = /^[0-9]{10,15}$/;
+
+        if (emailPattern.test(input) || phonePattern.test(input)) {
+            return true;
+        } else {
+            alert("Please enter a valid email or phone number.");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
