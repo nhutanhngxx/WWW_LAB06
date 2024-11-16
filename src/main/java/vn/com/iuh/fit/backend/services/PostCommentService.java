@@ -15,4 +15,12 @@ public class PostCommentService {
     public List<PostComment> getPostCommentsByPostId(Long postId) {
         return postCommentRepository.findByPostId(postId);
     }
+
+    public PostComment savePostComment(PostComment postComment) {
+        return postCommentRepository.save(postComment);
+    }
+
+    public PostComment getPostCommentById(Long id) {
+        return postCommentRepository.findById(id).orElse(null);
+    }
 }
