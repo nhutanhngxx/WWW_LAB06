@@ -200,7 +200,7 @@ INSERT INTO `post` (`author_id`, `parent_id`, `title`, `meta_title`, `summary`, 
 (5, NULL, 'Fifth Post', 'Introduction to SQL', 'This is the fifth post summary.', 1, '2024-11-05 14:00:00', '2024-11-05 15:00:00', '2024-11-05 15:00:00', 'Content of the fifth post.');
 
 INSERT INTO `post_comment` (`post_id`, `user_id`, `parent_id`, `title`, `published`, `created_at`, `published_at`, `content`)
-VALUESpost_comment
+VALUES post_comment
 (1, 1, NULL, 'Great post!', 1, '2024-11-01 12:00:00', '2024-11-01 12:30:00', 'This is a great post, thanks for sharing.'),
 (2, 2, NULL, 'Informative Post', 1, '2024-11-02 13:00:00', '2024-11-02 13:30:00', 'Very informative, I learned a lot.'),
 (1, 3, 1, 'Reply to Great post!', 1, '2024-11-01 12:45:00', '2024-11-01 13:00:00', 'I agree, it\'s a great post.'),

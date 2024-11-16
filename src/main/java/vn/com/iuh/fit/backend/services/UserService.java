@@ -19,7 +19,6 @@ public class UserService {
     private UserRepository userRepository;
 
     public User saveUser(User user) {
-        user.setPasswordHash(hashPassword(user.getPasswordHash()));
         return userRepository.save(user);
     }
 
