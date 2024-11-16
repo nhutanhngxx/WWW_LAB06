@@ -18,6 +18,7 @@
 - Đăng ký, đăng nhập tài khoản.
 - Đăng bài viết
 - Comment vào bài viết bất kỳ
+- Trả lời comment
 ## Hướng dẫn sử dụng
 1. Clone project từ GitHub về máy tính bằng lệnh:
 `git clone https://github.com/nhutanhngxx/WWW_LAB06.git`
